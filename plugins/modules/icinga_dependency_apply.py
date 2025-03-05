@@ -49,17 +49,17 @@ options:
     type: str
   imports:
     description:
-      - Importable templates, add as many as you want.
+      - Importable templates, add as many as you want. Required when state is C(present).
       - Please note that order matters when importing properties from multiple templates - last one wins.
+      - Required if I(state) is C(present).
     type: "list"
     elements: str
-    required: true
   apply_to:
     description:
-      - The object (Host, Services) to apply this dependency to.
-    type: str
-    required: true
-    choices: ["host", "services"]
+      - Whether this notification should affect hosts or services.
+      - Required if I(state) is C(present).
+    type: "str"
+    choices: ["host", "service"]
   parent_host:
     description:
       - The parent host.
@@ -158,7 +158,7 @@ EXAMPLES = """
     url: "{{ icinga_url }}"
     url_username: "{{ icinga_user }}"
     url_password: "{{ icinga_pass }}"
-    object_name: "DEPENDENCY_TMPL_dummy"
+    object_name: "DEPENDENCY_APPLY_dummy"
     ignore_soft_states: true
     append: true
 """
@@ -216,10 +216,10 @@ def main():
         state=dict(default="present", choices=["absent", "present"]),
         url=dict(required=True),
         append=dict(type="bool", choices=[True, False]),
-        object_name=dict(required=True, aliases=["name"]),
-        apply_to=dict(required=True, choices=["host", "services"]),
+        object_name=dict(aliases=["name"]),
+        apply_to=dict(choices=["service", "host"]),
         assign_filter=dict(required=False),
-        imports=dict(type="list", elements="str", required=True),
+        imports=dict(type="list", elements="str", required=False),
         parent_host=dict(required=False, type="str"),
         parent_service=dict(required=False, type="str"),
         disable_checks=dict(required=False, type="bool", choices=[True, False]),

@@ -52,8 +52,6 @@
     url_username: "{{ icinga_user }}"
     url_password: iamwrong
     object_name: "DEPENDENCY_APPLY_dummy"
-    imports:
-      - DEPENDENCY_TMPL_dummy
     ignore_soft_states: true
     append: true
   ignore_errors: true

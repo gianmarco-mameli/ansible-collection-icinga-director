@@ -38,7 +38,5 @@
     url_username: "{{ icinga_user }}"
     url_password: "{{ icinga_pass }}"
     object_name: "DEPENDENCY_APPLY_dummy"
-    imports:
-      - DEPENDENCY_TMPL_dummy
     ignore_soft_states: true
     append: true

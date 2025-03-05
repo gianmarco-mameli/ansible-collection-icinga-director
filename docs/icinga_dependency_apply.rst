@@ -28,13 +28,17 @@ Parameters
   object_name (True, str, None)
     Name for the Icinga service apply rule.
 
-  imports (True, list, None)
-    Importable templates, add as many as you want.
+  imports (optional, list, None)
+    Importable templates, add as many as you want. Required when state is :literal:`present`.
 
     Please note that order matters when importing properties from multiple templates - last one wins.
 
-  apply_to (True, str, None)
-    The object (Host, Services) to apply this dependency to.
+    Required if :emphasis:`state` is :literal:`present`.
+
+  apply_to (optional, str, None)
+    Whether this notification should affect hosts or services.
+
+    Required if :emphasis:`state` is :literal:`present`.
 
   parent_host (optional, str, None)
     The parent host.

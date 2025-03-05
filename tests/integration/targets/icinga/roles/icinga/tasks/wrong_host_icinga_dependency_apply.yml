@@ -51,7 +51,7 @@
     url: http://nonexistent
     url_username: "{{ icinga_user }}"
     url_password: "{{ icinga_pass }}"
-    object_name: "DEPENDENCY_TMPL_dummy"
+    object_name: "DEPENDENCY_APPLY_dummy"
     ignore_soft_states: true
     append: true
   ignore_errors: true
