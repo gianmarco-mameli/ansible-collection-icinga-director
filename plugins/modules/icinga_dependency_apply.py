@@ -216,7 +216,7 @@ def main():
         state=dict(default="present", choices=["absent", "present"]),
         url=dict(required=True),
         append=dict(type="bool", choices=[True, False]),
-        object_name=dict(aliases=["name"]),
+        object_name=dict(required=True, aliases=["name"]),
         apply_to=dict(choices=["service", "host"]),
         assign_filter=dict(required=False),
         imports=dict(type="list", elements="str", required=False),
