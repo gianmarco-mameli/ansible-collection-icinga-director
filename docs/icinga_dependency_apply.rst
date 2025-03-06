@@ -158,7 +158,7 @@ Examples
     url: "{{ icinga_url }}"
     url_username: "{{ icinga_user }}"
     url_password: "{{ icinga_pass }}"
-    object_name: "footdependencyapply"
+    object_name: footdependencyapply
     imports:
       - footdependencytemplate
     apply_to: host
@@ -170,12 +170,12 @@ Examples
     url: "{{ icinga_url }}"
     url_username: "{{ icinga_user }}"
     url_password: "{{ icinga_pass }}"
-    object_name: "footdependencyapplycustom"
+    object_name: footdependencyapplycustom
     imports:
       - footdependencytemplate
     apply_to: host
     assign_filter: 'host.name="foohost"'
-     disable_checks: true
+    disable_checks: true
     disable_notifications: true
     ignore_soft_states: false
     period: "24/7"
@@ -190,7 +190,7 @@ Examples
     url: "{{ icinga_url }}"
     url_username: "{{ icinga_user }}"
     url_password: "{{ icinga_pass }}"
-    object_name: "footdependencyapply"
+    object_name: footdependencyapplyappend
     ignore_soft_states: true
     append: true
 

@@ -5,7 +5,7 @@
     url: "{{ icinga_url }}"
     url_username: "{{ icinga_user }}"
     url_password: "{{ icinga_pass }}"
-    object_name: "footdependencyapply"
+    object_name: footdependencyapply
     apply_to: host
     assign_filter: 'host.name="foohost"'
 - name: Add dependency apply to icinga with customization
@@ -14,7 +14,7 @@
     url: "{{ icinga_url }}"
     url_username: "{{ icinga_user }}"
     url_password: "{{ icinga_pass }}"
-    object_name: "footdependencyapplycustom"
+    object_name: footdependencyapplycustom
     apply_to: host
     assign_filter: 'host.name="foohost"'
     disable_checks: true
@@ -31,6 +31,6 @@
     url: "{{ icinga_url }}"
     url_username: "{{ icinga_user }}"
     url_password: "{{ icinga_pass }}"
-    object_name: "footdependencyapply"
+    object_name: footdependencyapplyappend
     ignore_soft_states: true
     append: true

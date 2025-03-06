@@ -124,7 +124,7 @@ EXAMPLES = """
     url: "{{ icinga_url }}"
     url_username: "{{ icinga_user }}"
     url_password: "{{ icinga_pass }}"
-    object_name: "footdependencyapply"
+    object_name: footdependencyapply
     imports:
       - footdependencytemplate
     apply_to: host
@@ -136,7 +136,7 @@ EXAMPLES = """
     url: "{{ icinga_url }}"
     url_username: "{{ icinga_user }}"
     url_password: "{{ icinga_pass }}"
-    object_name: "footdependencyapplycustom"
+    object_name: footdependencyapplycustom
     imports:
       - footdependencytemplate
     apply_to: host
@@ -156,7 +156,7 @@ EXAMPLES = """
     url: "{{ icinga_url }}"
     url_username: "{{ icinga_user }}"
     url_password: "{{ icinga_pass }}"
-    object_name: "footdependencyapply"
+    object_name: footdependencyapplyappend
     ignore_soft_states: true
     append: true
 """

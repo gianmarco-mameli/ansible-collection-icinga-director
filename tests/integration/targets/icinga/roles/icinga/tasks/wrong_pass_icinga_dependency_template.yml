@@ -5,7 +5,7 @@
     url: "{{ icinga_url }}"
     url_username: "{{ icinga_user }}"
     url_password: iamwrong
-    object_name: "footdependencytemplate"
+    object_name: footdependencytemplate
     period: "24/7"
   ignore_errors: true
   register: result
@@ -20,7 +20,7 @@
     url: "{{ icinga_url }}"
     url_username: "{{ icinga_user }}"
     url_password: iamwrong
-    object_name: "footdependencytemplatecustom"
+    object_name: footdependencytemplatecustom
     disable_checks: true
     disable_notifications: true
     ignore_soft_states: false
@@ -42,7 +42,7 @@
     url: "{{ icinga_url }}"
     url_username: "{{ icinga_user }}"
     url_password: iamwrong
-    object_name: "footdependencytemplate"
+    object_name: footdependencytemplateappend
     ignore_soft_states: true
     append: true
   ignore_errors: true
