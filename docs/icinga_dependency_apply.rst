@@ -170,7 +170,7 @@ Examples
     url: "{{ icinga_url }}"
     url_username: "{{ icinga_user }}"
     url_password: "{{ icinga_pass }}"
-    object_name: "footdependencyapply"
+    object_name: "footdependencyapplycustom"
     imports:
       - footdependencytemplate
     apply_to: host
