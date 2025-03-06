@@ -5,7 +5,7 @@
     url: http://nonexistent
     url_username: "{{ icinga_user }}"
     url_password: "{{ icinga_pass }}"
-    object_name: "DEPENDENCY_TMPL_dummy"
+    object_name: "footdependencytemplate"
     period: "24/7"
   ignore_errors: true
   register: result
@@ -20,7 +20,7 @@
     url: http://nonexistent
     url_username: "{{ icinga_user }}"
     url_password: "{{ icinga_pass }}"
-    object_name: "DEPENDENCY_TMPL_dummy"
+    object_name: "footdependencytemplate"
     parent_host: foo_host
     parent_service: bar_service
     disable_checks: true
@@ -44,7 +44,7 @@
     url: http://nonexistent
     url_username: "{{ icinga_user }}"
     url_password: "{{ icinga_pass }}"
-    object_name: "DEPENDENCY_TMPL_dummy"
+    object_name: "footdependencytemplate"
     ignore_soft_states: true
     append: true
   ignore_errors: true

@@ -124,9 +124,9 @@ EXAMPLES = """
     url: "{{ icinga_url }}"
     url_username: "{{ icinga_user }}"
     url_password: "{{ icinga_pass }}"
-    object_name: "DEPENDENCY_APPLY_dummy"
+    object_name: "footdependencyapply"
     imports:
-      - DEPENDENCY_TMPL_dummy
+      - footdependencytemplate
     apply_to: host
     assign_filter: 'host.name="foohost"'
 
@@ -136,9 +136,9 @@ EXAMPLES = """
     url: "{{ icinga_url }}"
     url_username: "{{ icinga_user }}"
     url_password: "{{ icinga_pass }}"
-    object_name: "DEPENDENCY_APPLY_dummy"
+    object_name: "footdependencyapply"
     imports:
-      - DEPENDENCY_TMPL_dummy
+      - footdependencytemplate
     apply_to: host
     assign_filter: 'host.name="foohost"'
     parent_host: foo_host
@@ -158,7 +158,7 @@ EXAMPLES = """
     url: "{{ icinga_url }}"
     url_username: "{{ icinga_user }}"
     url_password: "{{ icinga_pass }}"
-    object_name: "DEPENDENCY_APPLY_dummy"
+    object_name: "footdependencyapply"
     ignore_soft_states: true
     append: true
 """
