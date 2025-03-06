@@ -141,8 +141,6 @@ EXAMPLES = """
       - footdependencytemplate
     apply_to: host
     assign_filter: 'host.name="foohost"'
-    parent_host: foo_host
-    parent_service: bar_service
     disable_checks: true
     disable_notifications: true
     ignore_soft_states: false
