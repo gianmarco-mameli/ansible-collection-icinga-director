@@ -153,7 +153,7 @@ Examples
     url: "{{ icinga_url }}"
     url_username: "{{ icinga_user }}"
     url_password: "{{ icinga_pass }}"
-    object_name: "footdependencytemplate"
+    object_name: "footdependencytemplatecustom"
     disable_checks: true
     disable_notifications: true
     ignore_soft_states: false
