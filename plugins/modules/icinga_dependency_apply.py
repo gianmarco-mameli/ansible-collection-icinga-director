@@ -156,7 +156,7 @@ EXAMPLES = """
     url: "{{ icinga_url }}"
     url_username: "{{ icinga_user }}"
     url_password: "{{ icinga_pass }}"
-    object_name: footdependencyapplyappend
+    object_name: footdependencyapply
     ignore_soft_states: true
     append: true
 """

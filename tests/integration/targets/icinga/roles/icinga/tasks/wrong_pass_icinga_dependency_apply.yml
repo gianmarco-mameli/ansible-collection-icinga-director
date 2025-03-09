@@ -49,7 +49,7 @@
     url: "{{ icinga_url }}"
     url_username: "{{ icinga_user }}"
     url_password: iamwrong
-    object_name: footdependencyapplyappend
+    object_name: footdependencyapply
     ignore_soft_states: true
     append: true
   ignore_errors: true
