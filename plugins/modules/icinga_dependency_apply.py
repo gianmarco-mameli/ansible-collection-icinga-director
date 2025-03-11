@@ -181,7 +181,7 @@ class DependencyApplyRule(Icinga2APIObject):
         super(DependencyApplyRule, self).__init__(module, path, data)
 
     def exists(self):
-        ret = self.call_url(path="/dependencyapplyrules")
+        ret = self.call_url(path="/dependency")
         if ret["code"] == 200:
             for existing_rule in ret["data"]["objects"]:
                 if existing_rule["object_name"] == self.data["object_name"]:
