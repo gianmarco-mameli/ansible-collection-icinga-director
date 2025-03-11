@@ -264,9 +264,9 @@ def main():
         for k in data_keys:
             data[k] = module.params[k]
 
-    data["object_type"] = "apply"
+    data["object_type"] = "object"
 
-    icinga_object = DependencyApplyRule(module=module, data=data)
+    icinga_object = Icinga2APIObject(module=module, path="/dependency", data=data)
 
     changed, diff = icinga_object.update(module.params["state"])
     module.exit_json(
