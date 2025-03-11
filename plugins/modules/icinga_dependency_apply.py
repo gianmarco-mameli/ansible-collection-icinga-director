@@ -264,7 +264,7 @@ def main():
         for k in data_keys:
             data[k] = module.params[k]
 
-    data["object_type"] = "object"
+    data["object_type"] = "apply"
 
     icinga_object = Icinga2APIObject(module=module, path="/dependency", data=data)
 
